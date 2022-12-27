@@ -1,6 +1,6 @@
 import unittest
 
-from cloudops.secret_manager.aws.secret import Secret, SecretConfig
+from cloudops.secret_manager.aws import Secret, SecretConfig
 
 
 class TestSecret(unittest.TestCase):
