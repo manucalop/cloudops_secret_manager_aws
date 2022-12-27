@@ -1,14 +1,22 @@
 import unittest
 
-from cloudops.secret_manager.google import GoogleSecret
+from cloudops.secret_manager.aws.secret import Secret, SecretConfig
 
 
-class TestSecretManager(unittest.TestCase):
+class TestSecret(unittest.TestCase):
+    # def setUp(self):
+    #     config = SecretConfig(
+    #         secret_id="test-secret-2",
+    #         region="eu-west-1",
+    #     )
+    #     self.secret = Secret(config)
+    #     if not self.secret.exists():
+    #         self.secret.create()
+
+    # def test_pull_push_secret(self):
+    #     payload = {"foo": "bar"}
+    #     self.secret.push(payload)
+    #     self.assertEqual(self.secret.pull(), payload)
+
     def test_dummy(self):
         self.assertEqual(True, True, "I leave Python!")
-
-    # def test_get_secret(self):
-    #     secret_manager = GoogleSecret("manucalop", "test-secret")
-    #     secret = secret_manager.pull()
-    #     print(secret)
-    #     assert secret["value"] == "test"
